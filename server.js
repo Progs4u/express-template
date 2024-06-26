@@ -10,7 +10,6 @@ const privateKey = fs.readFileSync('./ssl/key.pem', 'utf-8');
 const certificate = fs.readFileSync('./ssl/cert.pem', 'utf-8');
 const credentials = { key: privateKey, cert: certificate };
 
-
 const express = require("express") // import express framework
 const morgan = require("morgan") // import morgan debuger
 const cors = require("cors") // import cors middleware
@@ -32,8 +31,6 @@ app.use(bodyParser.json()) // use body-parser middleware JSON output
 // CREATE CONTEXT GLOBALLY
 const { createContext } = require("./middlewares/global")
 app.use(createContext);
-
-
 
 // Prevent app from crashing if validation fails MIDDLEWARE | to be combined with express-validator for forms
 app.use((err, req, res, next) => { // catch the error stack if it exists within a req chain
