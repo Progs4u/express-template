@@ -67,6 +67,7 @@ docker run -p 3000:3000 -v $(pwd):/app express-backend-boilerplate
 - `GET /`: Hello world route
 - `POST /user/signup`: User registration
 - `POST /user/login`: User login
+- `GET /user/logout`: User logout	
 - `GET /protected`: Example protected route (requires authentication)
 
 ## Authentication
